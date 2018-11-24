@@ -18,7 +18,11 @@ namespace NewTopics.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
+                new HomeMenuItem {Id = MenuItemType.CustomizableLabel, Title="Customizable Label" },
+                new HomeMenuItem {Id = MenuItemType.CustomizableNavigationBar, Title="Customizable Navigation Bar" },
+                new HomeMenuItem {Id = MenuItemType.ColordPlaceholder, Title="Colord Placeholder" },
+                new HomeMenuItem {Id = MenuItemType.BottomTab, Title="Bottom Tab" },
+                new HomeMenuItem {Id = MenuItemType.ImageButton, Title="Image Button" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" }
             };
 

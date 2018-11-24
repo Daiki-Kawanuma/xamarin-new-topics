@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="NewTopics.Views.CustomizableLabelPage"
+             xmlns:vm="clr-namespace:NewTopics.ViewModels"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:CustomizableLabelViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Label FontSize="Medium"
+               VerticalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="This app is written in C#, XAML, and native APIs using the" />
+                        <Span Text=" " />
+                        <Span Text="Xamarin Platform" 
+                              FontAttributes="Bold" 
+                              TextColor="Blue" 
+                              TextDecorations="Underline"
+                              FontSize="Large">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenWebCommand, Mode=OneWay}" 
+                                                      CommandParameter="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                        <Span Text="." />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </ContentPage.Content>
+</ContentPage>

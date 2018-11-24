@@ -6,7 +6,11 @@ namespace NewTopics.Models
 {
     public enum MenuItemType
     {
-        Browse,
+        CustomizableLabel,
+        CustomizableNavigationBar,
+        ColordPlaceholder,
+        BottomTab,
+        ImageButton,
         About
     }
     public class HomeMenuItem

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="NewTopics.Views.CustomizableNavigationBarPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" 
+                     VerticalOptions="Center" 
+                     Spacing="10">
+            <Image Source="Icon.png" 
+                   WidthRequest="36" />
+            <Label Text="3.2.0" 
+                   FontSize="16" 
+                   TextColor="White" 
+                   VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Label Text="Customizable Navigation Bar"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+    </ContentPage.Content>
+</ContentPage>

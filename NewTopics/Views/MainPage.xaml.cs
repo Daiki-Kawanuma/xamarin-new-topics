@@ -17,7 +17,7 @@ namespace NewTopics.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.CustomizableLabel, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -26,8 +26,20 @@ namespace NewTopics.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+                    case (int)MenuItemType.CustomizableLabel:
+                        MenuPages.Add(id, new NavigationPage(new CustomizableLabelPage()));
+                        break;
+                    case (int)MenuItemType.CustomizableNavigationBar:
+                        MenuPages.Add(id, new NavigationPage(new CustomizableNavigationBarPage()));
+                        break;
+                    case (int)MenuItemType.ColordPlaceholder:
+                        MenuPages.Add(id, new NavigationPage(new ColordPlaceholderPage()));
+                        break;
+                    case (int)MenuItemType.BottomTab:
+                        MenuPages.Add(id, new NavigationPage(new BottomTabbedPage()));
+                        break;
+                    case (int)MenuItemType.ImageButton:
+                        MenuPages.Add(id, new NavigationPage(new ImageButtonPage()));
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
